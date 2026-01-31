@@ -1,0 +1,120 @@
+.projects {
+  padding: 5rem 0;
+  background: #111;
+  color: #fff;
+}
+
+.projects .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-content {
+  padding: 2rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00d4ff;
+}
+
+.project-description {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: rgba(0, 212, 255, 0.1);
+  color: #00d4ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.project-link i {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
