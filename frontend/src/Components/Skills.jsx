@@ -19,7 +19,8 @@ const Skills = () => {
         <h2 className="section-title">Skills & Technologies</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div key={index} className="skill-item">
+            <div key={index} className="skill-item">  
+            
               <div className="skill-info">
                 <span className="skill-name">{skill.name}</span>
                 <span className="skill-percentage">{skill.level}%</span>
